@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body onload="alert('Page Loaded')"
+ onunload="alert('Page Closed')">
+<h2>Keyboard and Form Events</h2>
+<input type="text"
+ onkeydown="console.log('Key Down')"
+ onkeypress="console.log('Key Press')"
+ onkeyup="console.log('Key Up')"
+ placeholder="Type here">
+<br><br>
+<form onsubmit="alert('Form Submitted')"
+ onreset="alert('Form Reset')">
+<input type="text" onselect="alert('Text Selected')"><br><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+<script>
+window.onresize = function(){
+ alert("Window resized");
+};
+</script>
+</body>
+</html> 
