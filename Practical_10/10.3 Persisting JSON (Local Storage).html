@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Store and Retrieve JSON</h2>
+<script>
+let student = {
+ "name": "Amit",
+ "age": 18,
+ "course": "FYIT"
+};
+// Store JSON
+localStorage.setItem("studentData", JSON.stringify(student));
+// Retrieve JSON
+let data = localStorage.getItem("studentData");
+let obj = JSON.parse(data);
+document.write("Name: " + obj.name + "<br>");
+document.write("Age: " + obj.age + "<br>");
+document.write("Course: " + obj.course);
+</script>
+</body>
+</html> 
