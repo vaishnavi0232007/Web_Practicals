@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Radio & Multi-Select Validation</h2>
+<form onsubmit="return validateAll()">
+Gender:<br>
+<input type="radio" name="g" value="Male"> Male
+<input type="radio" name="g" value="Female"> Female
+<br><br>
+Subjects:<br>
+<select id="subjects" multiple size="3">
+ <option>HTML</option>
+ <option>CSS</option>
+ <option>JavaScript</option>
+</select>
+<br><br>
+<input type="submit" value="Submit">
+</form>
+<script>
+function validateAll() {
+ let gender =
+document.querySelector('input[name="g"]:checked');
+ let sub = document.getElementById("subjects");
+ if(!gender) {
+ alert("Select your gender");
+ return false;
+ }
+ let count = 0;
+ for(let i=0; i<sub.options.length; i++) {
+ if(sub.options[i].selected) count++;
+ }
+ if(count == 0) {
+ alert("Select at least one subject");
+ return false;
+ }
+ alert("Validation successful!");
+ return true;
+}
+</script>
+</body>
+</html>

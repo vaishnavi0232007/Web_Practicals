@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Form Validation Example</h2>
+<form onsubmit="return validateForm()">
+Name:
+<input type="text" id="name"><br><br>
+Course:
+<select id="course">
+ <option value="">Select Course</option>
+ <option>BSc IT</option>
+ <option>BSc CS</option>
+</select>
+<br><br>
+Hobbies:<br>
+<input type="checkbox" id="h1"> Coding
+<input type="checkbox" id="h2"> Music
+<br><br>
+<input type="submit" value="Submit">
+</form>
+<script>
+function validateForm() {
+ let name = document.getElementById("name").value;
+ let course = document.getElementById("course").value; 
+let h1 = document.getElementById("h1").checked;
+ let h2 = document.getElementById("h2").checked;
+ if(name == "") {
+ alert("Name cannot be empty");
+ return false;
+ }
+ if(course == "") {
+ alert("Please select a course");
+ return false;
+ }
+ if(!h1 && !h2) {
+ alert("Select at least one hobby");
+ return false;
+ }
+ alert("Form submitted successfully!");
+ return true;
+}
+</script>
+</body>
+</html> 
