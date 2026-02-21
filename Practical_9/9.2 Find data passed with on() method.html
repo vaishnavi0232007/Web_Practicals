@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+ $("button").on("click", {msg:"Hello Students"},
+function(event){
+ alert(event.data.msg);
+ });
+});
+</script>
+</head>
+<body>
+<h2>jQuery on() with Data</h2>
+<button>Click Me</button>
+</body>
+</html> 

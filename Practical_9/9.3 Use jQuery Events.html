@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+ $("#p1").mouseenter(function(){
+ $(this).css("color","blue");
+ });
+ $("#p1").mouseleave(function(){
+ $(this).css("color","black");
+ });
+});
+</script>
+</head>
+<body>
+<h2>jQuery Events Demo</h2>
+<p id="p1">Move mouse over me</p>
+</body>
+</html> 

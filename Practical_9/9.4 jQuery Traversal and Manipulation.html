@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+ $("#btn1").click(function(){
+ $("#list li:first").css("color","red");
+ });
+ $("#btn2").click(function(){
+ $("#list li:last").css("color","blue");
+ });
+ $("#btn3").click(function(){
+ $("#box").text("Text Changed!");
+ });
+});
+</script>
+</head>
+<body>
+<h2>Traversal & Manipulation</h2> 
+<ul id="list">
+ <li>HTML</li>
+ <li>CSS</li>
+ <li>JavaScript</li>
+</ul>
+<button id="btn1">Color First Item</button>
+<button id="btn2">Color Last Item</button>
+<br><br>
+<div id="box">Original Text</div>
+<button id="btn3">Change Text</button>
+</body>
+</html> 
